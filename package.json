@@ -1,0 +1,41 @@
+{
+  "name": "scoped-elements-performance",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Performance test for scoped elements",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manolakis/scoped-elements-performance.git"
+  },
+  "author": "Manolakis",
+  "homepage": "https://github.com/manolakis/scoped-elements-performance/",
+  "scripts": {
+    "start": "npx tachometer --config shack.json"
+  },
+  "files": [
+    "*.d.ts",
+    "*.js",
+    "src"
+  ],
+  "keywords": [
+    "lit-html",
+    "lit-element",
+    "web components",
+    "utils",
+    "helpers"
+  ],
+  "peerDependencies": {
+
+  },
+  "devDependencies": {
+    "chromedriver": "^79.0.0",
+    "clang-format": "^1.2.4",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0",
+    "tachometer": "^0.4.16"
+  },
+  "module": "index.js"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/tachometer/config.schema.json",
+  "timeout": 15,
+  "benchmarks": [
+    {
+      "browser": "chrome",
+      "measurement": "fcp",
+      "expand": [
+        {
+          "name": "lit-element",
+          "url": "lit-element"
+        }
+      ]
+    }
+  ]
+}
