@@ -9,6 +9,10 @@
         {
           "name": "lit-element",
           "url": "lit-element"
+        },
+        {
+          "name": "scoped-elements",
+          "url": "scoped-elements"
         }
       ]
     }

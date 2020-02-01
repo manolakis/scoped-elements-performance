@@ -24,11 +24,10 @@
     "lit-html",
     "lit-element",
     "web components",
-    "utils",
-    "helpers"
+    "performance"
   ],
-  "peerDependencies": {
-
+  "dependencies": {
+    "@open-wc/scoped-elements": "^0.2.5"
   },
   "devDependencies": {
     "chromedriver": "^79.0.0",
@@ -36,6 +35,5 @@
     "lit-element": "^2.0.1",
     "lit-html": "^1.0.0",
     "tachometer": "^0.4.16"
-  },
-  "module": "index.js"
+  }
 }

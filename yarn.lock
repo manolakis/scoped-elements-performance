@@ -89,6 +89,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@open-wc/scoped-elements@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@open-wc/scoped-elements/-/scoped-elements-0.2.5.tgz#30185cfc97dd14bb5a6b171a600d573fbd11dc3e"
+  integrity sha512-s5cdND94nMtvJCIAwJ+45tLDHSGM5GkVc+Itq+o+8jtS5yrhkkVWZuT4g8oIJkuWjX0aHAcj+Oo+Y2Z4WZdpLg==
+
 "@sindresorhus/is@^1.0.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-1.2.0.tgz#63ce3638cb85231f3704164c90a18ef816da3fb7"
