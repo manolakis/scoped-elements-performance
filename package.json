@@ -26,14 +26,9 @@
     "web components",
     "performance"
   ],
-  "dependencies": {
-    "@open-wc/scoped-elements": "^0.2.5"
-  },
   "devDependencies": {
     "chromedriver": "^79.0.0",
     "clang-format": "^1.2.4",
-    "lit-element": "^2.0.1",
-    "lit-html": "^1.0.0",
     "tachometer": "^0.4.16"
   }
 }

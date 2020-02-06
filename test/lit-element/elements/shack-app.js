@@ -1,4 +1,3 @@
-/* eslint-disable lit/no-invalid-html,lit/binding-positions */
 // @ts-nocheck
 /**
  * @license
@@ -11,17 +10,12 @@
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { css, LitElement } from 'lit-element';
-import { createScopedHtml } from '@open-wc/scoped-elements';
-import { ShackItem } from './shack-item.js';
-import { ShackCart } from './shack-cart.js';
+import './shack-item.js';
+import './shack-cart.js';
 
-const html = createScopedHtml({
-  'shack-cart': ShackCart,
-  'shack-item': ShackItem,
-});
+import { css, html, LitElement } from 'https://unpkg.com/lit-element@^2.2.1?module';
 
-export class ShackApp extends LitElement {
+class ShackApp extends LitElement {
   static get properties() {
     return {
       page: { type: String },
@@ -217,3 +211,5 @@ export class ShackApp extends LitElement {
     this.cart = [item.title, ...this.cart];
   }
 }
+
+customElements.define('shack-app', ShackApp);

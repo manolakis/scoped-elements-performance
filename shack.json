@@ -1,18 +1,22 @@
 {
   "$schema": "https://unpkg.com/tachometer/config.schema.json",
-  "timeout": 15,
+  "timeout": 5,
   "benchmarks": [
     {
       "browser": "chrome",
-      "measurement": "fcp",
+      "measurement": "callback",
       "expand": [
         {
           "name": "lit-element",
-          "url": "lit-element"
+          "url": "test/lit-element"
         },
         {
           "name": "scoped-elements",
-          "url": "scoped-elements"
+          "url": "test/scoped-elements"
+        },
+        {
+          "name": "scoped-elements-mixin",
+          "url": "test/se-mixin"
         }
       ]
     }
