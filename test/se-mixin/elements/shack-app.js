@@ -17,9 +17,11 @@ import { ShackItem } from './shack-item.js';
 import { ShackCart } from './shack-cart.js';
 
 export class ShackApp extends ScopedElementsMixin(LitElement) {
-  static scopedElements = {
-    'shack-item': ShackItem,
-    'shack-cart': ShackCart,
+  static get scopedElements() {
+    return {
+      'shack-item': ShackItem,
+      'shack-cart': ShackCart,
+    };
   };
 
   static get properties() {

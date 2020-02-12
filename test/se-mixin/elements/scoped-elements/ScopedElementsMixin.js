@@ -47,7 +47,10 @@ const createScopedElement = tagName => {
 
 export const ScopedElementsMixin = base => {
   class ScopedElement extends base {
-    static render = decorate(base.render);
+    constructor() {
+      super();
+      ScopedElement.render = decorate(base.render);
+    }
 
     createElement(tagName) {
       const klass = this.constructor.scopedElements[tagName];
