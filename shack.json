@@ -1,6 +1,7 @@
 {
   "$schema": "https://unpkg.com/tachometer/config.schema.json",
   "timeout": 5,
+  "resolveBareModules": false,
   "benchmarks": [
     {
       "browser": "chrome",
