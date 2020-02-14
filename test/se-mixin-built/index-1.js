@@ -11,5 +11,5 @@
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
 // eslint-disable-next-line import/no-absolute-path,import/no-unresolved
-// import * as bench from '/bench.js';
-// bench.start();
+import * as bench from '/bench.js';
+bench.start();

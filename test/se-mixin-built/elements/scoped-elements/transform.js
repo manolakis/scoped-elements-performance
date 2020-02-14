@@ -22,7 +22,6 @@ const transformTemplate = (strings, tags, cache) => {
   let transformedStrings;
 
   if (strings.__compiled__) {
-    console.log('compiled template');
     transformedStrings = strings.map(str => {
       if (typeof str === 'function') {
         return str(scopeTag);
@@ -31,7 +30,6 @@ const transformTemplate = (strings, tags, cache) => {
       }
     });
   } else {
-    console.log('not compiled template');
     transformedStrings = strings.map(str => {
       let acc = str;
       const matches = matchAll(str);

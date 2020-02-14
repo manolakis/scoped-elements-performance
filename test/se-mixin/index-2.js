@@ -11,7 +11,7 @@
 
 // @ts-ignore
 // eslint-disable-next-line import/no-absolute-path,import/no-unresolved
-// import * as bench from '/bench.js';
+import * as bench from '/bench.js';
 import { ShackApp } from './elements/shack-app.js';
 import { categories } from './data.js';
 

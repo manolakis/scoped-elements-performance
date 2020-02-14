@@ -11,6 +11,6 @@
  */
 
 // eslint-disable-next-line import/no-absolute-path,import/no-unresolved
-// import * as bench from '/bench.js';
+import * as bench from '/bench.js';
 
-// bench.start();
+bench.start();
