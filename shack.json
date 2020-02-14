@@ -4,15 +4,11 @@
   "benchmarks": [
     {
       "browser": "chrome",
-      "measurement": "callback",
+      "measurement": "fcp",
       "expand": [
         {
           "name": "lit-element",
           "url": "test/lit-element"
-        },
-        {
-          "name": "scoped-elements",
-          "url": "test/scoped-elements"
         },
         {
           "name": "scoped-elements-mixin",

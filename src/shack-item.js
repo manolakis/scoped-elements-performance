@@ -9,9 +9,26 @@
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { css, html, LitElement } from '../../../web_modules/lit-element.js';
+import { css, html, LitElement } from 'lit-element';
+import '@lion/button/lion-button.js';
+import { LionButton } from '@lion/button';
+import '@lion/icon/lion-icon.js';
+import { LionIcon } from '@lion/icon';
+import '@lion/input-datepicker/lion-input-datepicker.js';
+import { LionInputDatepicker } from '@lion/input-datepicker';
 
-export class ShackItem extends LitElement {
+import bugIcon from './bugs/bug01.svg.js';
+import { ScopedElementsMixin } from './scoped-elements/ScopedElementsMixin.js';
+
+export class ShackItem extends ScopedElementsMixin(LitElement) {
+  static get scopedElements() {
+    return {
+      'lion-button': LionButton,
+      'lion-icon': LionIcon,
+      'lion-input-datepicker': LionInputDatepicker,
+    };
+  }
+
   static get properties() {
     return {
       title: { type: String },
@@ -59,6 +76,10 @@ export class ShackItem extends LitElement {
 
   render() {
     return html`
+      <lion-button>
+        <lion-icon .svg=${bugIcon}></lion-icon>
+      </lion-button>
+      <lion-input-datepicker></lion-input-datepicker>
       <div class="imagePlaceholder"></div>
       <span class="title">${this.title}</span>
       <span class="price">$${this.price.toFixed(2)}</span>

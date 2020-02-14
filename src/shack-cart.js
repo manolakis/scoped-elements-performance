@@ -9,7 +9,7 @@
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { css, html, LitElement } from '../../../web_modules/lit-element.js';
+import { css, html, LitElement } from 'lit-element';
 
 export class ShackCart extends LitElement {
   static get properties() {
@@ -62,3 +62,5 @@ export class ShackCart extends LitElement {
     `;
   }
 }
+
+customElements.define('shack-cart', ShackCart);

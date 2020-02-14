@@ -16,7 +16,10 @@ const matchAll = str => {
 
 const transformTemplate = (strings, tags, cache) => {
   const scopeTag = tagName => {
-    const klass = tags[tagName];
+    const klass = tags && tags[tagName];
+    if (!klass) {
+      return tagName;
+    }
     return registerElement(tagName, klass);
   };
 

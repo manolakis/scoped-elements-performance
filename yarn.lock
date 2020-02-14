@@ -752,6 +752,205 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bundled-es-modules/message-format@6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
+  integrity sha512-NGUoPxqsBzDwvRhY3A3L/AhS1hzS9OWappfyDOyCwE7G3W4ua28gau7QwvJz7QzA6ArbAdeb8c1mLjvd1WUFAA==
+
+"@lion/button@0.5.5", "@lion/button@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@lion/button/-/button-0.5.5.tgz#57137c5ee285cbc77e9e018e01e500875195be16"
+  integrity sha512-QynHGlUxwAplUJQZBQOBt5GkZPVJMusEIBbCj61ZhcI6FdkWwqzi3rXhhUvXiqlh1j1kRe6vxb3eJ1QaRsQQvA==
+  dependencies:
+    "@lion/core" "0.4.3"
+
+"@lion/calendar@0.6.9":
+  version "0.6.9"
+  resolved "https://registry.yarnpkg.com/@lion/calendar/-/calendar-0.6.9.tgz#30914fbbae4c22c26b44bf09f18557a5b69cb077"
+  integrity sha512-pFcNDSeNxqPK5pHC5Ixyay9Z9A2WdZNbIyFg9TG8fK3gZeD0kQHYL/4NiUe8iJyNor1sQRzoVQquU7SI8cUA2g==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/localize" "0.8.6"
+
+"@lion/checkbox-group@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@lion/checkbox-group/-/checkbox-group-0.6.3.tgz#a69152cdff76f3ed7100f4ae0facab5efee7ce00"
+  integrity sha512-fzwptQkCOYodKbw7NkczPqO+v6Wg+0/ZCnvnl2lvYRHv8dByULlVpSYLZ99qhmIPiIhnDTpf8iPJT6TZmp66/g==
+  dependencies:
+    "@lion/choice-input" "0.6.1"
+    "@lion/core" "0.4.3"
+    "@lion/fieldset" "0.7.1"
+
+"@lion/checkbox@^0.3.11":
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/@lion/checkbox/-/checkbox-0.3.11.tgz#175d7ec59ea078faa83cf07b28caba4d38ae2570"
+  integrity sha512-hcLpxTtrTkA40yQT0bGr3hnjc8JdnnY6eIhGh3Y3opdMYUQixbqEIoj5Zqfw0RcpUXY5DDwOR7+XfxVd/bs5Bg==
+  dependencies:
+    "@lion/choice-input" "0.6.1"
+    "@lion/core" "0.4.3"
+    "@lion/input" "0.5.11"
+
+"@lion/choice-input@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@lion/choice-input/-/choice-input-0.6.1.tgz#83b41cba423e9cd76360a53e3bc36040754848c6"
+  integrity sha512-DoaWMGkPUVoVo3XHCzqxxHdhg4SJKud2VLLzzB/L5aXkt38d1bshNDBhONZN2+jVU2g/LtinHHVRkvmQLzW6/g==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+
+"@lion/core@0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@lion/core/-/core-0.4.3.tgz#57f76dd49a8e06224dfa3ab407791ed35b9b18d9"
+  integrity sha512-bYajgauEMEPf/p8yoE5atu9Nk2s/96uw3UOOeRLkOrdyfCgiKAO4Kiwgfpp9+/q5pFDj5svYaBpe0kpoaM33jA==
+  dependencies:
+    lit-element "^2.2.1"
+    lit-html "^1.0.0"
+
+"@lion/field@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@lion/field/-/field-0.9.1.tgz#5410ab4218635ce48c1c259e3b532c367947e68f"
+  integrity sha512-cauL9RbYqPiaGIX/lCBh2ITDvT/Lnt+vTqj6n+r2wtQGnVMhAMFQfBOgYinILwcXtndF2ILcn4/IPgmLBfn1YQ==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/validate" "0.6.6"
+
+"@lion/fieldset@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@lion/fieldset/-/fieldset-0.7.1.tgz#4b708b5bc9cf8e1a60909633696febcd9cccb952"
+  integrity sha512-T0lxxiSg7QCXwvX6lQNQwh4eozUer74xDDxknAeB6nohMkiFrwl8iw4YMSLl81yfCssjdReioI7pY/cMGUd1rA==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+    "@lion/validate" "0.6.6"
+
+"@lion/form@^0.4.11":
+  version "0.4.11"
+  resolved "https://registry.yarnpkg.com/@lion/form/-/form-0.4.11.tgz#571111740898ea798db2a46f0b4208a51cfef4fc"
+  integrity sha512-68v41Ep/M7KYo62FvO5QnI7D7Zyi0BQuOriakqcCsl/10RWaQnW9zV07lAFgqRN4CKQrC8XCbN/n8rxLevJPDw==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/fieldset" "0.7.1"
+
+"@lion/icon@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@lion/icon/-/icon-0.3.3.tgz#c5f0c53b83fbb3e3183660768f4226cfaff652b3"
+  integrity sha512-StL8GmyBGt/ifBlgFTTmA7JjRLICAXKaLnyo+S41gm7Z7lqBQQAXk2nhB4FdMQ+on98ibVYok2VfRo7Ndu1YpQ==
+  dependencies:
+    "@lion/core" "0.4.3"
+
+"@lion/input-date@0.5.11", "@lion/input-date@^0.5.11":
+  version "0.5.11"
+  resolved "https://registry.yarnpkg.com/@lion/input-date/-/input-date-0.5.11.tgz#61dfbfbe67f6b68adf183a915c4bef91a7f2aa22"
+  integrity sha512-nCKDL+GYh59EXMyzonw4miN4nuj7VWjKOGhveoBQTm6Zi2Kpb4NvQjo4d4ZkhM+Jhe/gO41jqUhQIM0gLOMm0Q==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+    "@lion/input" "0.5.11"
+    "@lion/localize" "0.8.6"
+    "@lion/validate" "0.6.6"
+
+"@lion/input-datepicker@^0.8.15":
+  version "0.8.15"
+  resolved "https://registry.yarnpkg.com/@lion/input-datepicker/-/input-datepicker-0.8.15.tgz#1870b9089e4b7a5f85efec9b239e3d321d26b234"
+  integrity sha512-b5AnSf10NvSQcqKM2XZrNIPyWAY5uoSoFPWacPtvZK5MEGEyTMjg7DjnyxHuzsMYcTlllhCeddmY+mNqjaqVzA==
+  dependencies:
+    "@lion/calendar" "0.6.9"
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+    "@lion/input-date" "0.5.11"
+    "@lion/localize" "0.8.6"
+    "@lion/overlays" "0.12.1"
+    "@lion/validate" "0.6.6"
+
+"@lion/input-range@^0.2.11":
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/@lion/input-range/-/input-range-0.2.11.tgz#a21a24b2d53ab00375e95ed81c9477c88d8aa12a"
+  integrity sha512-wg5gCzi+evSGId/PVnJbuVTOLVC6SXLIGocH+n5/cqWsNskSy9SBD2SPhTD3bzRYmzbx3Tg/OSWqpJUOj9iXXQ==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+    "@lion/input" "0.5.11"
+    "@lion/localize" "0.8.6"
+
+"@lion/input@0.5.11":
+  version "0.5.11"
+  resolved "https://registry.yarnpkg.com/@lion/input/-/input-0.5.11.tgz#42d4994821d1ea3d9b5ac8d835e551003f84030d"
+  integrity sha512-m/oQDPTwnFAOWX0GQPQduPoz7xaWnRxOqlzZavTCX0VQU2YFlFvjoaFNGLSCI7j6POkkBgFMJOuuSrfChKiZvQ==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+
+"@lion/localize@0.8.6":
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/@lion/localize/-/localize-0.8.6.tgz#b323dce4c0f6717ac2724cc3ab8be1efd4224030"
+  integrity sha512-f/5OvYRoK27vEjECyS7I88XXEeG15FkO+ZoumWMbiWfdV4xlNPTV0LG3ZcThxpj8QLUTKTW/AI+120Vainp2RQ==
+  dependencies:
+    "@bundled-es-modules/message-format" "6.0.4"
+    "@lion/core" "0.4.3"
+
+"@lion/option@0.5.1", "@lion/option@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@lion/option/-/option-0.5.1.tgz#7e6defa0508c4949d266fd754aa0b65aa11663a9"
+  integrity sha512-5ab7hq0A4CkxtDTf44r0Nx7sWJzLgsRalOC6nfD9KVxp6MDsZYaT58vQUGH8D2Fetgeil9qr3NMoyxlQwjlSOg==
+  dependencies:
+    "@lion/choice-input" "0.6.1"
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+
+"@lion/overlays@0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@lion/overlays/-/overlays-0.12.1.tgz#9bb69485d6ac87397f26e6944475a673852e64d8"
+  integrity sha512-XPKruGHJGU6RGhZqgh9XHc8g4OK7aMMWyjrOkDrlbOrB2hwGNQqWytuD69PEfx81GBLos5QQEb7JR3WEaks32A==
+  dependencies:
+    "@lion/core" "0.4.3"
+    popper.js "^1.15.0"
+
+"@lion/select-rich@^0.10.3":
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/@lion/select-rich/-/select-rich-0.10.3.tgz#06e70a7c5573975efe4e52a6f9271e09f2bca840"
+  integrity sha512-V5KbBcwHgGjPOvIHfJ0DGsE+ytOr9vckWZhkP/0yz4uePD+/bAMYPfqVC2SduG0NNAIBpucHrWjSy4WcEqjYQg==
+  dependencies:
+    "@lion/button" "0.5.5"
+    "@lion/choice-input" "0.6.1"
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+    "@lion/option" "0.5.1"
+    "@lion/overlays" "0.12.1"
+    "@lion/validate" "0.6.6"
+
+"@lion/switch@^0.5.13":
+  version "0.5.13"
+  resolved "https://registry.yarnpkg.com/@lion/switch/-/switch-0.5.13.tgz#2dffe9efe6e87939927ded3afa164391ce95c529"
+  integrity sha512-ep/e4wVhJgDd/efZO0WJgbnwV1q+ZcaexnO7XKEtXn8s6EPSnBvyvXyFffFvHhZuLFUimMWPa+CgcYmg6EwXuQ==
+  dependencies:
+    "@lion/choice-input" "0.6.1"
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+
+"@lion/tabs@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@lion/tabs/-/tabs-0.2.3.tgz#0b4d379f8ea30e8b6fbe4dd8f54257abd2174879"
+  integrity sha512-AIRcXkoEXSPoURI7IMAw6AFS/OTelG90z2gqN+D8oUh4tzo0lTc8VCk88pgHwSVAr8vkdMpRjZeB/VmjMDurMg==
+  dependencies:
+    "@lion/core" "0.4.3"
+
+"@lion/textarea@^0.5.12":
+  version "0.5.12"
+  resolved "https://registry.yarnpkg.com/@lion/textarea/-/textarea-0.5.12.tgz#16d94c02191b6f1a3d46386eb01d0b0e7876b4e4"
+  integrity sha512-FZHc3DA3P5lTB4+MzVi7fUTxWdB+M0hj7rM5C5VIIBIMuGFrCbAdlhMhtGzjbb9TB5d3UlBaAjY/px3IXJuY3Q==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/field" "0.9.1"
+    autosize "4.0.2"
+
+"@lion/validate@0.6.6":
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/@lion/validate/-/validate-0.6.6.tgz#1c919c427cc9fd071147d21b32d4485593e5b3fe"
+  integrity sha512-PQs/RcNmGNDayQ5P8Jj8P91fnUStbk7/Z4e1kQSkbdgEo/BMzQ2xrjPjgIrOkrYoWPIhtgAXm5bc7jfoQP4CIA==
+  dependencies:
+    "@lion/core" "0.4.3"
+    "@lion/localize" "0.8.6"
+
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"
@@ -805,11 +1004,6 @@
     whatwg-fetch "^3.0.0"
     whatwg-url "^7.0.0"
 
-"@open-wc/scoped-elements@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@open-wc/scoped-elements/-/scoped-elements-0.3.1.tgz#50287241afafdcc8e74ad37a7e2c3008572460ca"
-  integrity sha512-8xGmHGST3Tf/oYI5CqHfP8SXvTz9yz19gN9mlN13CxHlnKYPYhxhAHTL8iRUZBk3dxPB6yVEj0Mity0xkhV/VA==
-
 "@rollup/plugin-commonjs@^11.0.0":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-11.0.2.tgz#837cc6950752327cb90177b608f0928a4e60b582"
@@ -839,7 +1033,7 @@
     is-module "^1.0.0"
     resolve "^1.11.1"
 
-"@rollup/plugin-node-resolve@^7.1.0":
+"@rollup/plugin-node-resolve@^7.1.0", "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-7.1.1.tgz#8c6e59c4b28baf9d223028d0e450e06a485bb2b7"
   integrity sha512-14ddhD7TnemeHE97a4rLOhobfYvUVcaYuqTnL8Ti7Jxi9V9Jr5LY7Gko4HZ5k4h4vqQM0gBQt6tsp9xXW94WPA==
@@ -1471,6 +1665,11 @@ atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+
+autosize@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/autosize/-/autosize-4.0.2.tgz#073cfd07c8bf45da4b9fd153437f5bafbba1e4c9"
+  integrity sha512-jnSyH2d+qdfPGpWlcuhGiHmqBJ6g3X+8T+iRwFrHPLVcdoGJE/x6Qicm6aDHfTsbgZKxyV8UU/YB2p4cjKDRRA==
 
 aws-sign2@~0.7.0:
   version "0.7.0"
@@ -3809,7 +4008,7 @@ lit-element@^2.2.1:
   dependencies:
     lit-html "^1.0.0"
 
-lit-html@^1.0.0, lit-html@^1.1.2:
+lit-html@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.1.2.tgz#2e3560a7075210243649c888ad738eaf0daa8374"
   integrity sha512-FFlUMKHKi+qG1x1iHNZ1hrtc/zHmfYTyrSvs3/wBTvaNtpZjOZGWzU7efGYVpgp6KvWeKF6ql9/KsCq6Z/mEDA==
@@ -4581,6 +4780,11 @@ polyfills-loader@^1.2.2:
     valid-url "^1.0.9"
     whatwg-fetch "^3.0.0"
 
+popper.js@^1.15.0:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
+
 portfinder@^1.0.21:
   version "1.0.25"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.25.tgz#254fd337ffba869f4b9d37edc298059cb4d35eca"
@@ -4916,7 +5120,7 @@ rollup-plugin-babel@^4.3.3:
     "@babel/helper-module-imports" "^7.0.0"
     rollup-pluginutils "^2.8.1"
 
-rollup-plugin-terser@^5.1.1:
+rollup-plugin-terser@^5.1.1, rollup-plugin-terser@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-5.2.0.tgz#ba758adf769347b7f1eaf9ef35978d2e207dccc7"
   integrity sha512-jQI+nYhtDBc9HFRBz8iGttQg7li9klmzR62RG2W2nN6hJ/FI2K2ItYQ7kJ7/zn+vs+BP1AEccmVRjRN989I+Nw==
@@ -4934,7 +5138,7 @@ rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.2.3:
+rollup@^1.2.3, rollup@^1.31.1:
   version "1.31.1"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.31.1.tgz#4170d6f87148d46e5fbe29b493f8f3ea3453c96f"
   integrity sha512-2JREN1YdrS/kpPzEd33ZjtuNbOuBC3ePfuZBdKEybvqcEcszW1ckyVqzcEiEe0nE8sqHK+pbJg+PsAgRJ8+1dg==
