@@ -1,4 +1,5 @@
 // @ts-nocheck
+
 /**
  * @license
  * Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
@@ -9,8 +10,6 @@
  * Google as part of the polymer project is also subject to an additional IP
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
-
 // eslint-disable-next-line import/no-absolute-path,import/no-unresolved
 // import * as bench from '/bench.js';
-
 // bench.start();
