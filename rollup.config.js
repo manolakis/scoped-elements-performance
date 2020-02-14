@@ -9,7 +9,7 @@ function createConfig(name) {
     output: {
       dir: `dist/${name}`,
       format: 'esm',
-      sourcemap: false,
+      sourcemap: true,
     },
     plugins: [
       // resolve bare import specifiers

@@ -33,7 +33,7 @@ const transformTemplate = (strings, tags, cache) => {
       }
     });
   } else {
-    transformedStrings = strings.map(str => {
+    transformedStrings = !tags ? strings : strings.map(str => {
       let acc = str;
       const matches = matchAll(str);
 
