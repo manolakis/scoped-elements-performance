@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    "./babel-plugin-scoped-elements/babel-plugin-scoped-elements.js",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-import-meta"
+  ]
+}

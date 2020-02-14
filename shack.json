@@ -17,6 +17,10 @@
         {
           "name": "scoped-elements-mixin",
           "url": "test/se-mixin"
+        },
+        {
+          "name": "scoped-elements-mixin-built",
+          "url": "test/se-mixin-built"
         }
       ]
     }
