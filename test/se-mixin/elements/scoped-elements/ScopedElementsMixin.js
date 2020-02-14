@@ -1,4 +1,4 @@
-import { TemplateResult } from 'https://unpkg.com/lit-html@^1.0.0?module';
+import { TemplateResult } from '../../../../web_modules/lit-html.js';
 import { transform } from "./transform.js";
 import { registerElement } from "./scoped-elements.js";
 

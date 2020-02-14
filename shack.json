@@ -4,7 +4,7 @@
   "benchmarks": [
     {
       "browser": "chrome",
-      "measurement": "fcp",
+      "measurement": "callback",
       "expand": [
         {
           "name": "lit-element",

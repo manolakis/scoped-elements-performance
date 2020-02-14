@@ -13,7 +13,7 @@
 import './shack-item.js';
 import './shack-cart.js';
 
-import { css, html, LitElement } from 'https://unpkg.com/lit-element@^2.2.1?module';
+import { css, html, LitElement } from '../../../web_modules/lit-element.js';
 
 class ShackApp extends LitElement {
   static get properties() {

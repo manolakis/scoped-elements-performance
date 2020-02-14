@@ -11,7 +11,7 @@ __scopedTemplateStrings1__.__compiled__ = true
  * Google as part of the polymer project is also subject to an additional IP
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
-import { css, html, LitElement } from 'https://unpkg.com/lit-element@^2.2.1?module';
+import { css, html, LitElement } from '../../../web_modules/lit-element.js';
 export class ShackItem extends LitElement {
   static get properties() {
     return {

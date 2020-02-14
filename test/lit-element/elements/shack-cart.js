@@ -9,7 +9,7 @@
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { css, html, LitElement } from 'https://unpkg.com/lit-element@^2.2.1?module';
+import { css, html, LitElement } from '../../../web_modules/lit-element.js';
 
 export class ShackCart extends LitElement {
   static get properties() {

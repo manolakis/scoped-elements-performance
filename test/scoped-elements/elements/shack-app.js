@@ -11,8 +11,8 @@
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { css, LitElement } from 'https://unpkg.com/lit-element@^2.2.1?module';
-import { createScopedHtml } from 'https://unpkg.com/@open-wc/scoped-elements@^0.2.5?module';
+import { css, LitElement } from '../../../web_modules/lit-element.js';
+import { createScopedHtml } from '../../../web_modules/@open-wc/scoped-elements.js';
 import { ShackItem } from './shack-item.js';
 import { ShackCart } from './shack-cart.js';
 
