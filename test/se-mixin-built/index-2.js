@@ -11,8 +11,7 @@
 // @ts-ignore
 // eslint-disable-next-line import/no-absolute-path,import/no-unresolved
 import * as bench from '/bench.js';
-import { ShackApp } from './elements/shack-app.js';
-import { categories } from './data.js';
+import '../../dist/mixin-built/shack-app.js';
 
 const retry = async func => new Promise(resolve => {
   setTimeout(() => resolve(func()));
@@ -49,11 +48,9 @@ const createClickEvent = () => {
 };
 
 const execute = async () => {
-  customElements.define('shack-app', ShackApp);
   const app = document.createElement('shack-app');
-  app.page = 'mens_tshirts';
-  app.categories = categories;
   document.body.appendChild(app);
+
   const $shackApp = await findElement(document.body, 'shack-app');
   const $shackItems = await findElements($shackApp.shadowRoot, '.shack-item');
   const $shackCart = await findElement($shackApp.shadowRoot, '.shack-cart');

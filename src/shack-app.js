@@ -1,5 +1,3 @@
-/* eslint-disable lit/no-invalid-html,lit/binding-positions */
-// @ts-nocheck
 /**
  * @license
  * Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
@@ -11,18 +9,42 @@
  * rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { css, html, LitElement } from '../../../web_modules/lit-element.js';
-import { ScopedElementsMixin } from './scoped-elements/ScopedElementsMixin.js';
-import { ShackItem } from './shack-item.js';
-import { ShackCart } from './shack-cart.js';
+import { css, html, LitElement } from 'lit-element';
 
-export class ShackApp extends ScopedElementsMixin(LitElement) {
+import { categories } from './data.js';
+import { ScopedElementsMixin } from './scoped-elements/ScopedElementsMixin.js';
+import './shack-item.js';
+import './shack-cart.js';
+import { ShackForm1 } from './shack-form-1.js';
+import { ShackForm2 } from './shack-form-2.js';
+import { ShackForm3 } from './shack-form-3.js';
+import { ShackForm4 } from './shack-form-4.js';
+import { ShackForm5 } from './shack-form-5.js';
+import { ShackForm6 } from './shack-form-6.js';
+import { ShackTabs1 } from './shack-tabs-1.js';
+import { ShackTabs2 } from './shack-tabs-2.js';
+import { ShackTabs3 } from './shack-tabs-3.js';
+import { ShackTabs4 } from './shack-tabs-4.js';
+import { ShackTabs5 } from './shack-tabs-5.js';
+import { ShackTabs6 } from './shack-tabs-6.js';
+
+class ShackApp extends ScopedElementsMixin(LitElement) {
   static get scopedElements() {
     return {
-      'shack-item': ShackItem,
-      'shack-cart': ShackCart,
+      'shack-form-1': ShackForm1,
+      'shack-form-2': ShackForm2,
+      'shack-form-3': ShackForm3,
+      'shack-form-4': ShackForm4,
+      'shack-form-5': ShackForm5,
+      'shack-form-6': ShackForm6,
+      'shack-tabs-1': ShackTabs1,
+      'shack-tabs-2': ShackTabs2,
+      'shack-tabs-3': ShackTabs3,
+      'shack-tabs-4': ShackTabs4,
+      'shack-tabs-5': ShackTabs5,
+      'shack-tabs-6': ShackTabs6,
     };
-  };
+  }
 
   static get properties() {
     return {
@@ -160,6 +182,8 @@ export class ShackApp extends ScopedElementsMixin(LitElement) {
   constructor() {
     super();
     this.cart = [];
+    this.categories = categories;
+    this.page = 'mens_tshirts';
   }
 
   render() {
@@ -172,6 +196,16 @@ export class ShackApp extends ScopedElementsMixin(LitElement) {
 
       <main id="categoryList">
         <div id="hero"></div>
+
+        <shack-form-1></shack-form-1>
+        <shack-tabs-1></shack-tabs-1>
+
+        <shack-form-2></shack-form-2>
+        <shack-tabs-2></shack-tabs-2>
+
+        <shack-form-3></shack-form-3>
+        <shack-tabs-3></shack-tabs-3>
+
         <h2 id="categoryTitle">${this.categories[this.page].title}</h2>
         <span id="numItems">
           (${this.categories[this.page].items.length} items)
@@ -179,7 +213,7 @@ export class ShackApp extends ScopedElementsMixin(LitElement) {
 
         <div id="list">
           ${this.categories[this.page].items.map(
-        item => html`
+            item => html`
               <shack-item
                 class="shack-item"
                 .title=${item.title}
@@ -188,13 +222,19 @@ export class ShackApp extends ScopedElementsMixin(LitElement) {
               >
               </shack-item>
             `,
-    )}
+          )}
         </div>
-      </main>
 
-      <footer id="footer">
-        <div id="demoNotice">DEMO ONLY</div>
-      </footer>
+        <shack-form-4></shack-form-4>
+        <shack-tabs-4></shack-tabs-4>
+
+        <shack-form-5></shack-form-5>
+        <shack-tabs-5></shack-tabs-5>
+
+        <shack-form-6></shack-form-6>
+        <shack-tabs-6></shack-tabs-6>
+
+      </main>
     `;
   }
 
@@ -219,3 +259,5 @@ export class ShackApp extends ScopedElementsMixin(LitElement) {
     this.cart = [item.title, ...this.cart];
   }
 }
+
+customElements.define('shack-app', ShackApp);

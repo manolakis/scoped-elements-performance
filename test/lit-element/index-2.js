@@ -13,8 +13,7 @@
 // @ts-ignore
 // eslint-disable-next-line import/no-absolute-path,import/no-unresolved
 import * as bench from '/bench.js';
-import './elements/shack-app.js';
-import { categories } from './data.js';
+import '../../dist/lit-element/shack-app.js';
 
 const retry = async func =>
     new Promise(resolve => {
@@ -72,8 +71,6 @@ const createClickEvent = () => {
 
 const execute = async () => {
   const app = document.createElement('shack-app');
-  app.page = 'mens_tshirts';
-  app.categories = categories;
   document.body.appendChild(app);
 
   const $shackApp = await findElement(document.body, 'shack-app');

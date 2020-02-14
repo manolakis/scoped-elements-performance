@@ -1,4 +1,5 @@
-import { TemplateResult } from '../../../../web_modules/lit-html.js';
+import { LitElement } from 'lit-element';
+import { TemplateResult } from 'lit-html';
 import { transform } from "./transform.js";
 import { registerElement } from "./scoped-elements.js";
 
@@ -41,16 +42,18 @@ const decorate = litRender => {
   };
 };
 
+LitElement.render = decorate(LitElement.render);
+
 const createScopedElement = tagName => {
   console.log(tagName, this.constructor.scopedElements);
 };
 
 export const ScopedElementsMixin = base => {
   class ScopedElement extends base {
-    constructor() {
-      super();
-      ScopedElement.render = decorate(base.render);
-    }
+    // constructor() {
+    //   super();
+    //   ScopedElement.render = decorate(base.render);
+    // }
 
     createElement(tagName) {
       const klass = this.constructor.scopedElements[tagName];
