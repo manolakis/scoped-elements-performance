@@ -5,9 +5,9 @@ const merge = require('deepmerge');
 
 function createConfig(name) {
   return {
-    input: 'src/shack-app.js',
+    input: 'src/real-world-app/shack-app.js',
     output: {
-      dir: `dist/${name}`,
+      dir: `dist/real-world-app/${name}`,
       format: 'esm',
       sourcemap: true,
     },

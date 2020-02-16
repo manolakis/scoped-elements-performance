@@ -11,7 +11,7 @@ import '@lion/input-range/lion-input-range.js';
 import { LionTextarea } from '@lion/textarea';
 import '@lion/textarea/lion-textarea.js';
 
-import { ScopedElementsMixin } from './scoped-elements/ScopedElementsMixin.js';
+import { ScopedElementsMixin } from '../scoped-elements/ScopedElementsMixin.js';
 
 export class ShackTabs1 extends ScopedElementsMixin(LitElement) {
   static get scopedElements() {

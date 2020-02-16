@@ -12,7 +12,7 @@
 import { css, html, LitElement } from 'lit-element';
 
 import { categories } from './data.js';
-import { ScopedElementsMixin } from './scoped-elements/ScopedElementsMixin.js';
+import { ScopedElementsMixin } from '../scoped-elements/ScopedElementsMixin.js';
 import './shack-item.js';
 import './shack-cart.js';
 import { ShackForm1 } from './shack-form-1.js';

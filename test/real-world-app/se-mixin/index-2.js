@@ -12,7 +12,7 @@
 // @ts-ignore
 // eslint-disable-next-line import/no-absolute-path,import/no-unresolved
 import * as bench from '/bench.js';
-import '../../dist/mixin/shack-app.js';
+import '../../../dist/real-world-app/mixin/shack-app.js';
 
 const retry = async func =>
     new Promise(resolve => {

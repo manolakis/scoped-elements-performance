@@ -18,7 +18,7 @@ import '@lion/input-datepicker/lion-input-datepicker.js';
 import { LionInputDatepicker } from '@lion/input-datepicker';
 
 import bugIcon from './bugs/bug01.svg.js';
-import { ScopedElementsMixin } from './scoped-elements/ScopedElementsMixin.js';
+import { ScopedElementsMixin } from '../scoped-elements/ScopedElementsMixin.js';
 
 export class ShackItem extends ScopedElementsMixin(LitElement) {
   static get scopedElements() {
