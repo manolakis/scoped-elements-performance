@@ -1,3 +1,4 @@
 - Test encoding of template literals
 - Don't make each array element a function, but just do one function in total
 - in scoped mixin, add another check for compiled template but without custom elements. I fix it now by always compiling all templates
+- optimize by not passing a function if there are no tags

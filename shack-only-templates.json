@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/tachometer/config.schema.json",
+  "timeout": 5,
+  "resolveBareModules": false,
+  "benchmarks": [
+    {
+      "browser": "chrome",
+      "measurement": "callback",
+      "expand": [
+        {
+          "name": "lit-element",
+          "url": "test/only-templates/lit-element"
+        },
+        {
+          "name": "scoped-elements-mixin",
+          "url": "test/only-templates/se-mixin"
+        },
+        {
+          "name": "scoped-elements-mixin-built",
+          "url": "test/only-templates/se-mixin-built"
+        }
+      ]
+    }
+  ]
+}
