@@ -8,7 +8,7 @@ const {
   isIdentifier, identifier, arrayExpression,
   variableDeclaration, variableDeclarator,
   callExpression, assignmentExpression, memberExpression,
-  booleanLiteral,
+  booleanLiteral, expressionStatement,
 } = require('@babel/core').types;
 const { transformQuasisWithDynamicTags } = require('./src/transformQuasisWithDynamicTags');
 
@@ -44,19 +44,14 @@ function babelPluginScopedElements() {
         const program = path.hub.file.ast.program;
         const { body } = program;
 
-        const transformedQuasis = transformQuasisWithDynamicTags(node.quasi.quasis);
-        if (!transformedQuasis) {
-          // quasis did not contain custom elements
-          return;
-        }
-        const stringsArray = arrayExpression(transformedQuasis);
-        const stringsId = identifier(nextName(program));
-        const varDeclarator = variableDeclarator(stringsId, stringsArray);
-        const varDeclaration = variableDeclaration('const', [varDeclarator]);
-        const compiledMarker = assignmentExpression('=', memberExpression(stringsId, identifier('__compiled__')), booleanLiteral(true))
+        const varName = nextName(program);
+        const templateStrings = transformQuasisWithDynamicTags(varName, node.quasi.quasis);
+
+        const stringsId = identifier(varName)
+        const compiledMarker = expressionStatement(assignmentExpression('=', memberExpression(stringsId, identifier('__compiled__')), booleanLiteral(true)))
 
         body.unshift(compiledMarker);
-        body.unshift(varDeclaration);
+        body.unshift(templateStrings);
         const templateAsFunction = callExpression(identifier(node.tag.name), [stringsId, ...node.quasi.expressions]);
         path.replaceWith(templateAsFunction);
       }

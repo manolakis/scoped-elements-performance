@@ -12,7 +12,7 @@ import { LionOption } from '@lion/option';
 import '@lion/form/lion-form.js';
 import { LionForm } from '@lion/form';
 
-import { ScopedElementsMixin } from './scoped-elements/ScopedElementsMixin.js';
+import { ScopedElementsMixin } from '../scoped-elements/ScopedElementsMixin.js';
 
 export class ShackForm1 extends ScopedElementsMixin(LitElement) {
   static get scopedElements() {

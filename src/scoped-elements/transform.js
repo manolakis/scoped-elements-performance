@@ -25,15 +25,13 @@ const transformTemplate = (strings, tags, cache) => {
 
   let transformedStrings;
   if (strings.__compiled__) {
+    if (typeof strings === 'function') {
+      transformedStrings = strings(scopeTag);
+    } else {
+      transformedStrings = strings;
+    }
+  } else if (tags) {
     transformedStrings = strings.map(str => {
-      if (typeof str === 'function') {
-        return str(scopeTag);
-      } else {
-        return str;
-      }
-    });
-  } else {
-    transformedStrings = !tags ? strings : strings.map(str => {
       let acc = str;
       const matches = matchAll(str);
 
@@ -53,6 +51,8 @@ const transformTemplate = (strings, tags, cache) => {
 
       return acc;
     });
+  } else {
+    transformedStrings = strings;
   }
 
   cache.set(strings, transformedStrings);

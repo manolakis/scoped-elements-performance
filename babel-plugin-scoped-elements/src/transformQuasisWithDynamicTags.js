@@ -6,7 +6,8 @@
 const originalMatchAll = require('string.prototype.matchall');
 
 const {
-  templateLiteral, templateElement, callExpression, identifier, arrowFunctionExpression, isArrowFunctionExpression, stringLiteral
+  templateLiteral, templateElement, callExpression, identifier, arrowFunctionExpression,
+  stringLiteral, arrayExpression, isTemplateLiteral, variableDeclarator, variableDeclaration,
 } = require('@babel/core').types;
 /**
  * @typedef {object} Result
@@ -51,20 +52,25 @@ function transformQuasi(quasi) {
     quasis.push(templateElement({ raw: string.slice(previousEndI) }))
   }
 
-  const resultLiteral = templateLiteral(quasis, expressions);
-
-  return arrowFunctionExpression([identifier('t')], resultLiteral)
+  return templateLiteral(quasis, expressions);
 }
 
 /**
+ * @param {string} variableName
  * @param {TemplateElement[]} quasis
  */
-function transformQuasisWithDynamicTags(quasis) {
+function transformQuasisWithDynamicTags(variableName, quasis) {
   const transformed = quasis.map(q => transformQuasi(q));
-  if (!transformed.some(q => isArrowFunctionExpression(q))) {
-    return transformed;
+  let template;
+
+  if (transformed.some(q => isTemplateLiteral(q))) {
+    template = arrowFunctionExpression([identifier('t')], arrayExpression(transformed));
+  } else {
+    template = arrayExpression(transformed);
   }
-  return transformed;
+
+  const varDeclarator = variableDeclarator(identifier(variableName), template);
+  return variableDeclaration('const', [varDeclarator]);
 }
 
 module.exports = { transformQuasisWithDynamicTags };

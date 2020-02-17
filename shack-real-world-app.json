@@ -5,19 +5,19 @@
   "benchmarks": [
     {
       "browser": "chrome",
-      "measurement": "fcp",
+      "measurement": "callback",
       "expand": [
         {
           "name": "lit-element",
-          "url": "test/lit-element"
+          "url": "test/real-world-app/lit-element"
         },
         {
           "name": "scoped-elements-mixin",
-          "url": "test/se-mixin"
+          "url": "test/real-world-app/se-mixin"
         },
         {
           "name": "scoped-elements-mixin-built",
-          "url": "test/se-mixin-built"
+          "url": "test/real-world-app/se-mixin-built"
         }
       ]
     }

@@ -3,11 +3,13 @@ const { terser } = require('rollup-plugin-terser');
 const babel = require('rollup-plugin-babel');
 const merge = require('deepmerge');
 
-function createConfig(name) {
+const mixinPath = require.resolve('./src/scoped-elements/ScopedElementsMixin.js');
+
+function createConfig(app, name) {
   return {
-    input: 'src/shack-app.js',
+    input: `src/${app}/shack-app.js`,
     output: {
-      dir: `dist/${name}`,
+      dir: `dist/${app}/${name}`,
       format: 'esm',
       sourcemap: true,
     },
@@ -19,40 +21,45 @@ function createConfig(name) {
   }
 }
 
-const mixinPath = require.resolve('./src/scoped-elements/ScopedElementsMixin.js');
-
-module.exports = [
-  merge(
-    createConfig('lit-element'),
-    {
-      plugins: [
-        {
-          name: 'noop-mixin',
-          load(id) {
-            if (id === mixinPath) {
-              // Make ScopedElementsMixin do nothing for the lit-element test
-              return 'export const ScopedElementsMixin = base => base;';
+function createConfigs(app) {
+  return [
+    merge(
+      createConfig(app, 'lit-element'),
+      {
+        plugins: [
+          {
+            name: 'noop-mixin',
+            load(id) {
+              if (id === mixinPath) {
+                // Make ScopedElementsMixin do nothing for the lit-element test
+                return 'export const ScopedElementsMixin = base => base;';
+              }
             }
           }
-        }
-      ]
+        ]
+      }
+    ),
+
+    createConfig(app, 'mixin'),
+
+    merge(
+      createConfig(app, 'mixin-built'),
+      {
+        plugins: [
+          babel({
+            plugins: [
+              require.resolve("./babel-plugin-scoped-elements/babel-plugin-scoped-elements.js"),
+              require.resolve("@babel/plugin-syntax-dynamic-import"),
+              require.resolve("@babel/plugin-syntax-import-meta")
+            ]
+          })
+        ]
     }
-  ),
+    )
+  ];
+}
 
-  createConfig('mixin'),
-
-  merge(
-    createConfig('mixin-built'),
-    {
-      plugins: [
-        babel({
-          plugins: [
-            require.resolve("./babel-plugin-scoped-elements/babel-plugin-scoped-elements.js"),
-            require.resolve("@babel/plugin-syntax-dynamic-import"),
-            require.resolve("@babel/plugin-syntax-import-meta")
-          ]
-        })
-      ]
-   }
-  )
+module.exports = [
+  ...createConfigs('only-templates'),
+  ...createConfigs('real-world-app'),
 ];

@@ -13,8 +13,9 @@
   "author": "Manolakis",
   "homepage": "https://github.com/manolakis/scoped-elements-performance/",
   "scripts": {
-    "start": "es-dev-server --open demo/ --watch --node-resolve",
-    "test": "npx tachometer --config shack.json",
+    "start": "es-dev-server --open",
+    "test:real-world-app": "npx tachometer --config shack-real-world-app.json",
+    "test:only-templates": "npx tachometer --config shack-only-templates.json",
     "build": "rm -rf dist && rollup -c rollup.config.js",
     "test:babel-plugin": "mocha babel-plugin-scoped-elements/test/*.test.js",
     "test:babel-plugin:watch": "npm run test:babel-plugin -- --watch"

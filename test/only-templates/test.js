@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * @license
  * Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
@@ -12,7 +13,6 @@
 // @ts-ignore
 // eslint-disable-next-line import/no-absolute-path,import/no-unresolved
 import * as bench from '/bench.js';
-import '../../dist/mixin/shack-app.js';
 
 const retry = async func =>
     new Promise(resolve => {
@@ -73,13 +73,11 @@ const execute = async () => {
   document.body.appendChild(app);
 
   const $shackApp = await findElement(document.body, 'shack-app');
-  const $shackItems = await findElements($shackApp.shadowRoot, '.shack-item');
-  const $shackCart = await findElement($shackApp.shadowRoot, '.shack-cart');
-  const $cart = await findElement($shackCart.shadowRoot, 'a');
+  const elements = await findElements($shackApp.shadowRoot, '*');
+  const element = elements[elements.length - 1];
 
-  $shackApp.addEventListener('shack-cart-clicked', () => requestAnimationFrame(() => bench.stop()));
-  $shackItems.forEach(item => item.click());
-  $cart.dispatchEvent(createClickEvent());
+  element.addEventListener('button-clicked', () => requestAnimationFrame(() => bench.stop()));
+  element.shadowRoot.querySelector('button').click();
 };
 
 execute();
